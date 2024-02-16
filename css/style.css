@@ -1,0 +1,240 @@
+/* Define CSS variables for the color scheme */
+:root {
+  --deep-blue: #13293d;
+  --powder-blue: #fbfef3;
+  --text-blue: #03265f;
+  --background-blue: #d5dcf0;
+  --heliotrope: #ca3dcf;
+}
+
+/* Set the box-sizing property to border-box on all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Set the body's background color and other global styles */
+body {
+  background-color: var(--background-blue);
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Remove the default margins on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Style the header section of the webpage */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--deep-blue);
+    color: var(--bright-turquoise);
+}
+
+/* Below are the style rules for the "header h1" on the webpage */
+header h1 {
+  color: var(--deep-blue);
+   background-color: var(--powder-blue);
+    display: inline-block;
+    font-size: 48px;
+  text-indent: 70px;
+  padding-right: 10px;
+  margin-left: -20px;
+}
+
+/* Below are the style rules for the nav bar on the webpage */
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+/* No marker will be shown on the menu on the webpage */
+/* Remove the bullet points from the navigation menu and contact footer links at bottom of page*/
+header nav ul, .contact-footer li {
+    list-style-type: none;
+}
+
+/* Below are the style rules for the header nav bar menu on the webpage */
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/* Below are the style rules for the ref of nav bar menu on the webpage */
+a {
+    color: var(--powder-blue);
+    text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Set the margin on all paragraphs to 0 */
+p {
+  margin: 0;
+}
+
+/* Style the hero banner section of the webpage */
+.hero-banner {
+  background-image:linear-gradient(rgba(0, 0, 255, 0.3),
+   rgba(69, 69, 154, 0.3)), url("../images/02-hero-bg.jpg");
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Style the heading in the hero banner h2 element */
+.hero-banner h2 {
+  color: var(--deep-blue);
+   background-color: var(--powder-blue);
+       font-size: 28px;
+    margin: 40px 80px 75px 100px;
+    float: right;
+}
+
+/* Style the page section elements */
+.page-section{
+  display: flex;
+  margin: 5rem 5rem 5rem 5rem;
+}
+
+/* Style the headings in the page section elements */
+.page-section h2{
+  font-size: 40px;
+  flex: 20%;
+  border-right: 3px solid var(--text-blue);
+  text-align: right;
+  padding-right: 10px;
+  margin-right: 20px;
+}
+
+/* Style the paragraph and grid elements in the page section elements */
+.page-section p, .work-sect-grid,.contact-footer {
+flex: 80%;
+}
+
+/* Below are Styling for the grid containers for portfolio items */
+.work-grid-container1 { grid-area: container1; 
+  background-image:linear-gradient(rgba(0, 0, 255, 0.3),
+  rgba(0, 0, 255, 0.3)), url("../images/02-run-buddy.jpg");
+  border-style: solid;
+  border-color: var(--powder-blue);
+}
+
+.work-grid-container2 { grid-area: container2;
+  background-image:linear-gradient(rgba(0, 0, 255, 0.3),
+  rgba(0, 0, 255, 0.3)), url("../images/02-portfolio-1.jpg");
+  border-style: solid;
+  border-color: var(--powder-blue);
+   }
+.work-grid-container3 { grid-area: container3; 
+background-image:linear-gradient(rgba(0, 0, 255, 0.3),
+rgba(0, 0, 255, 0.3)), url("../images/02-portfolio-2.jpg");
+border-style: solid;
+  border-color: var(--powder-blue);
+}
+.work-grid-container4 { grid-area: container4;
+  background-image:linear-gradient(rgba(0, 0, 255, 0.3),
+  rgba(0, 0, 255, 0.3)), url("../images/02-portfolio-3.jpg");
+  border-style: solid;
+  border-color: var(--powder-blue);
+ }
+.work-grid-container5 { grid-area: container5; 
+  background-image:linear-gradient(rgba(0, 0, 255, 0.3),
+  rgba(0, 0, 255, 0.3)), url("../images/02-portfolio-4.jpg");
+  border-style: solid;
+  border-color: var(--powder-blue);}
+
+  .container:hover .image {
+    opacity: 0.3;
+  }
+
+  /* Below are Styling for the grid layout */
+.work-sect-grid {
+  display: grid;
+  grid-template-rows: repeat(5,100px);
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "container1 container1"
+    "container1 container1"
+    "container1 container1"
+    "container2 container3"
+    "container4 container5"
+;
+  grid-gap: 4px;
+  padding: 4px;
+}
+
+/* Below are Styling for the grid area layout */
+.work-grid-area {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px;
+    display: grid;
+    cursor: pointer;
+  align-content: end;
+}
+
+/* Below are Styling for text within grid areas */
+.work-grid-area h4, .work-grid-area p{
+  background-color: var(--powder-blue);
+  inline-size: 100px;
+  
+}
+/* Bottom margin for paragraphs  in class work-grid-area*/
+.work-grid-area p{
+  margin-bottom: 10px;
+}
+
+/* Below are Stylings for the contact footer */
+.contact-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Below are Stylings for the contact footer list a tags */
+.contact-footer li a {
+  color: var(--text-blue);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  header, .contact-footer {
+    flex-direction: column;
+  }
+
+  main {
+    max-width: 1200px;
+  }
+
+  .work-sect-grid {
+    display: grid;
+    grid-template-rows: repeat(5,120px);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "container1"
+      "container2"
+      "container3"
+      "container4"
+      "container5"
+  ;
+    grid-gap: 4px;
+    padding: 4px;
+  }
+}
