@@ -238,3 +238,10 @@ border-style: solid;
     padding: 4px;
   }
 }
+Styling the placeholder text
+input::placeholder {
+  color: #999; /* Placeholder text color */
+  font-style: italic; /* Placeholder text style */
+  /* Add more styles as needed */
+}
+
